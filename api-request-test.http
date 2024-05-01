@@ -1,0 +1,72 @@
+@hostname = localhost:4000
+
+### requests using rest client VS plugin
+### GET Note
+GET http://{{hostname}}/api/notes HTTP/1.1
+Content-Type: application/json
+Connection: keep-alive
+
+### POST Note
+POST http://{{hostname}}/api/notes HTTP/1.1
+Content-Type: application/json
+Connection: keep-alive
+
+{
+    "title": "my first note",
+    "content": "this is my first note",
+    "author": "notty"
+}
+
+### GET Note by id
+GET http://{{hostname}}/api/notes/6631c6f57efd8695c9297fd6 HTTP/1.1
+Content-Type: application/json
+Connection: keep-alive
+
+### DELETE Note by id
+DELETE http://{{hostname}}/api/notes/6631c6f57efd8695c9297fd6 HTTP/1.1
+Content-Type: application/json
+Connection: keep-alive
+
+### PUT Note by id
+PUT http://{{hostname}}/api/notes/6631c90319d5d56ed069a5ed HTTP/1.1
+Content-Type: application/json
+Connection: keep-alive
+
+{
+    "title": "my updated note1",
+    "content": "this is my updated note1",
+    "author": "test1"
+}
+
+### USERS
+GET http://{{hostname}}/api/users HTTP/1.1
+Content-Type: application/json
+Connection: keep-alive
+
+### POST user
+POST http://{{hostname}}/api/users HTTP/1.1
+Content-Type: application/json
+Connection: keep-alive
+
+{
+    "username": "test2"
+}
+
+### GET user by id
+GET http://{{hostname}}/api/users/6631cf2712451a6c598db39c HTTP/1.1
+Content-Type: application/json
+Connection: keep-alive
+
+### PUT user by id
+PUT http://{{hostname}}/api/users/6631cf2712451a6c598db39c HTTP/1.1
+Content-Type: application/json
+Connection: keep-alive
+
+{
+    "username": "test2updated"
+}
+
+### DELETE user by id
+DELETE http://{{hostname}}/api/users/6631cf2712451a6c598db39c HTTP/1.1
+Content-Type: application/json
+Connection: keep-alive
